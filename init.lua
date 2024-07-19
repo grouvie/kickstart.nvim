@@ -291,6 +291,7 @@ require('lazy').setup({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>l', group = '[L]eap' },
       }
     end,
   },
@@ -569,7 +570,7 @@ require('lazy').setup({
         -- pyright = {},
         rust_analyzer = {
           settings = {
-            ["rust-analyzer"] = {
+            ['rust-analyzer'] = {
               cargo = {
                 allFeatures = true,
                 loadOutDirsFromCheck = true,
@@ -578,18 +579,18 @@ require('lazy').setup({
               -- Add clippy lints for Rust.
               checkOnSave = {
                 allFeatures = true,
-                command = "clippy",
+                command = 'clippy',
                 extraArgs = {
-                  "--",
-                  "--no-deps",
-                  "-Dclippy::correctness",
-                  "-Dclippy::complexity",
-                  "-Wclippy::perf",
-                  "-Wclippy::pedantic",
+                  '--',
+                  '--no-deps',
+                  '-Dclippy::correctness',
+                  '-Dclippy::complexity',
+                  '-Wclippy::perf',
+                  '-Wclippy::pedantic',
                 },
               },
             },
-          }
+          },
         },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
